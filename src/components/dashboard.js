@@ -25,7 +25,7 @@ const Dashboard = () => {
 
   const fetchJobs = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/jobs');
+      const response = await axios.get('https://job-tracker-v7w5.onrender.com/api/jobs');
       setJobs(response.data);
       setFilteredJobs(response.data);
     } catch (error) {
@@ -50,7 +50,7 @@ const Dashboard = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this job?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/jobs/${id}`);
+        await axios.delete(`https://job-tracker-v7w5.onrender.com/api/jobs/${id}`);
         // alert('Job deleted successfully');
         fetchJobs();
       } catch (error) {
@@ -82,7 +82,7 @@ const Dashboard = () => {
 
   const saveEdit = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/jobs/${id}`, editForm);
+      await axios.put(`https://job-tracker-v7w5.onrender.com/api/jobs/${id}`, editForm);
       alert('Job updated successfully');
       fetchJobs();
       cancelEditing();
