@@ -22,7 +22,7 @@ const AddJob = () => {
     const newJob = { title, status, location, company, date, link };
 
     try {
-      await axios.post('http://localhost:5000/api/jobs', newJob);
+      await axios.post('https://job-tracker-v7w5.onrender.com/api/jobs', newJob);
       alert('Job added successfully');
 
       // Clear form fields
