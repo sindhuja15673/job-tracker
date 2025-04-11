@@ -1,0 +1,254 @@
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  top: 0;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+  margin-left: 290px;
+  transition: margin-left 0.3s ease;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+select {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    
+  }
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* .job-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 6px solid #007bff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  margin-top: 15px;
+} */
+
+.job-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.job-card h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.job-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.job-card p:last-child {
+  margin-bottom: 0;
+}
+
+.job-card p span {
+  font-weight: 600;
+}
+
+button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.edit-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.no-jobs {
+  text-align: center;
+  color: #ff4d4d;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+
+.job-cards {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 6px solid #007bff;
+}
+
+.job-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.job-avatar {
+  background-color: #17a2b8;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.job-info h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.job-info .company {
+  margin: 0;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.job-card-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  padding: 15px 0;
+  font-size: 14px;
+  color: #333;
+  align-items: center;
+}
+
+.job-card-body p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-badge.applied {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.interview {
+  background-color: #9de9f3;
+  color: #154857;
+}
+.status-badge.offer {
+  background-color: #8bfca5;
+  color: #154d57;
+}
+.status-badge.declined {
+  background-color: #f5aa8c;
+  color: #571515;
+}
+
+
+
+.job-card-footer {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-btn {
+  background-color: #0f9b30;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.edit-btn:hover{
+  background-color: #1ccc51 !important;
+}
+.delete-btn:hover{
+  background-color: #ee4848 !important;
+}
+.delete-btn {
+  background-color: #db1727;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+/* .job-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.job-card:hover {
+  transform: scale(1.01);
+}
+
+*/
