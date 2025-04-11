@@ -13,7 +13,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/users/register', { name, email, password });
+      const response = await axios.post('https://job-tracker-v7w5.onrender.com/api/users/register', { name, email, password });
       alert(response.data.message);
       navigate('/login');
     } catch (error) {
